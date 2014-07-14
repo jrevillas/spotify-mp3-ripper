@@ -1,42 +1,35 @@
-spotifyripper
-=============
+sputrifis
+=========
 
-small ripper script for spotify (rips playlists to mp3 and includes ID3 tags) 
+Sputrifis es un script escrito en Python con el que puedes descargar canciones y playlists enteras de Spotify. Ten en cuenta que Spotify no permite este tipo de descargas, utiliza este código bajo tu propia responsabilidad.
 
-note that stream ripping violates the ToC's of libspotify!
+utilizando sputrifis
+--------------------
+    ./sputrifis.py [username] [password] [spotify_url]
 
-usage
------
-    ./jbripper.py [username] [password] [spotify_url]
-
-examples
+ejemplos
 --------
-    "./jbripper.py user pass spotify:track:52xaypL0Kjzk0ngwv3oBPR" creates "Beat It.mp3" file
-    "./jbripper.py user pass spotify:user:[user]:playlist:7HC9PMdSbwGBBn3EVTaCNx rips entire playlist
+    ./sputrifis.py javirevillas 123456 spotify:track:0q6LuUqGLUiCPP1cbdwFs3
+    ./sputrifis.py javirevillas 123456 spotify:user:aguarate:playlist:77sxS8MfEXMvgD1t5JikQq
 
-features
---------
-* real-time VBR ripping from spotify PCM stream
+características
+---------------
+* Descarga en tiempo real del stream PCM de Spotify.
 
-* writes id3 tags (including album covers)
+* Incluye etiquetas ID3 en los archivos MP3.
 
-* creates files and directories based on the following structure artist/album/song.mp3
+* Descarga e incluye las portadas de los álbumes.
 
-prerequisites:
---------------
-* libspotify (download at https://developer.spotify.com/technologies/libspotify/)
+* Ubica los archivos siguiendo una estructura lógica de directorios.
 
-* pyspotify (sudo pip install -U pyspotify, requires python-dev)
+dependencias
+------------
+* Spotify binary appkey - https://developer.spotify.com/
 
-* spotify binary appkey (download at developer.spotify.com and copy to wd, requires premium!)
+* libspotify - https://developer.spotify.com/technologies/libspotify/
 
-* lame (sudo apt-get install lame)
+* pyspotify - sudo pip install pyspotify
 
-* eyeD3 (pip install eyeD3)
+* lame - sudo apt-get install lame
 
-TODO
-----
-- [ ] skip exisiting track (avoid / completed tracks / completed = successful id3)
-- [ ] detect if other spotify instance is interrupting
-- [ ] add album supprt : spotify:album:1UnRYaeCev9JVKEHWBEgHe
-
+* eyeD3 - sudo pip install eyeD3
